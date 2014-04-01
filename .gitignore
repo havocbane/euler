@@ -1,0 +1,7 @@
+*.ncb
+*.suo
+Debug
+*.opensdf
+*.sdf
+/UpgradeLog.htm
+*.user
