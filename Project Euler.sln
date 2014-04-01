@@ -3,16 +3,35 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project Euler Support Library", "Project Euler Support Library\Project Euler Support Library.vcproj", "{86AA8E4A-66D0-4743-81C6-0E885EE174FD}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project Euler 3", "Project Euler 3\Project Euler 3.vcproj", "{AD42847B-45AA-42DF-B27D-51E161AEA187}"
+	ProjectSection(ProjectDependencies) = postProject
+		{86AA8E4A-66D0-4743-81C6-0E885EE174FD} = {86AA8E4A-66D0-4743-81C6-0E885EE174FD}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
 		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{86AA8E4A-66D0-4743-81C6-0E885EE174FD}.Debug|Win32.ActiveCfg = Debug|Win32
 		{86AA8E4A-66D0-4743-81C6-0E885EE174FD}.Debug|Win32.Build.0 = Debug|Win32
+		{86AA8E4A-66D0-4743-81C6-0E885EE174FD}.Debug|x64.ActiveCfg = Debug|x64
+		{86AA8E4A-66D0-4743-81C6-0E885EE174FD}.Debug|x64.Build.0 = Debug|x64
 		{86AA8E4A-66D0-4743-81C6-0E885EE174FD}.Release|Win32.ActiveCfg = Release|Win32
 		{86AA8E4A-66D0-4743-81C6-0E885EE174FD}.Release|Win32.Build.0 = Release|Win32
+		{86AA8E4A-66D0-4743-81C6-0E885EE174FD}.Release|x64.ActiveCfg = Release|x64
+		{86AA8E4A-66D0-4743-81C6-0E885EE174FD}.Release|x64.Build.0 = Release|x64
+		{AD42847B-45AA-42DF-B27D-51E161AEA187}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AD42847B-45AA-42DF-B27D-51E161AEA187}.Debug|Win32.Build.0 = Debug|Win32
+		{AD42847B-45AA-42DF-B27D-51E161AEA187}.Debug|x64.ActiveCfg = Debug|x64
+		{AD42847B-45AA-42DF-B27D-51E161AEA187}.Debug|x64.Build.0 = Debug|x64
+		{AD42847B-45AA-42DF-B27D-51E161AEA187}.Release|Win32.ActiveCfg = Release|Win32
+		{AD42847B-45AA-42DF-B27D-51E161AEA187}.Release|Win32.Build.0 = Release|Win32
+		{AD42847B-45AA-42DF-B27D-51E161AEA187}.Release|x64.ActiveCfg = Release|x64
+		{AD42847B-45AA-42DF-B27D-51E161AEA187}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

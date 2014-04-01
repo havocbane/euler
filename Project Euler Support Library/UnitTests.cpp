@@ -32,8 +32,8 @@ bool UT::testGeneratePrimes()
 		return true;
 	}
 
-	vector<unsigned> expected;
-	unsigned num = 0;
+	vector<unsigned long long> expected;
+	unsigned long long num = 0;
 	
 	while(input >> num)
 	{
@@ -42,8 +42,8 @@ bool UT::testGeneratePrimes()
 	input.close();
 
 	// Call the support routine.
-	unsigned last = 7919;
-	const vector<unsigned> results = PE::Primes::generatePrimes(last);
+	unsigned long long last = 7919;
+	const vector<unsigned long long> results = PE::Primes::generatePrimes(last);
 
 	/************************************************************\
 	 * Compare support routine results with expected from file. *

@@ -9,6 +9,8 @@
  * @todo Add a license.
  */
 
+#include <list>
+
 #include "ProjectEulerSupportLibrary.hpp"
 
 // Create an alias for the larger namespace.
@@ -27,7 +29,7 @@ namespace PE = ProjectEuler;
  * Unfortunately, this quickly results in an overflow.
  * So, I need to use a different method until I can figure out how to support bigger numbers more easily.
  */
-bool PE::Primes::isPrime(const unsigned n)
+bool PE::Primes::isPrime(const unsigned long long n)
 {
 	/// @todo Come back to this method with big int support.
 	/*
@@ -41,7 +43,7 @@ bool PE::Primes::isPrime(const unsigned n)
 	return false;
 	*/
 	// Naive method (check for divisors from 2 to sqrt(n)).
-	for(unsigned m = 2; m * m < n; ++m)
+	for(unsigned long long m = 2; m * m < n; ++m)
 	{
 		if(n % m == 0)
 		{
@@ -56,11 +58,11 @@ bool PE::Primes::isPrime(const unsigned n)
  * I have used the optimization of marking multiples starting at the square of the primes.
  * @todo I could further optimize this to only list the odd numbers and count by multiples of 2 times the index each iteration of the inner loop.
  */
-const std::vector<unsigned> PE::Primes::generatePrimes(const unsigned max)
+const std::vector<unsigned long long> PE::Primes::generatePrimes(const unsigned long long max)
 {
 	using namespace std;
 
-	vector<unsigned> primes;
+	vector<unsigned long long> primes;
 	vector<bool> marks(max+1, true); // I know this is discouraged, but it suits my needs.
 
 	// 0 is a zero divisor and 1 is a unit, so technically these are not primes.
@@ -84,7 +86,7 @@ const std::vector<unsigned> PE::Primes::generatePrimes(const unsigned max)
 	{
 		if(marks[i])
 		{
-			primes.push_back(static_cast<unsigned>(i));
+			primes.push_back(static_cast<unsigned long long>(i));
 		}
 	}
 	return primes;
@@ -93,7 +95,7 @@ const std::vector<unsigned> PE::Primes::generatePrimes(const unsigned max)
 /** Implementation for factorial method in Math namespace
  * This will recursively calculate the factorial of n.
  */
-unsigned PE::Math::factorial(const unsigned n)
+unsigned long long PE::Math::factorial(const unsigned long long n)
 {
 	if(n <= 1)
 	{

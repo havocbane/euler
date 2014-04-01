@@ -27,14 +27,14 @@ namespace Primes {
 	 * @param n The number to test.
 	 * @return true if n is prime, false otherwise (composite, unit, zero-divisor, etc.).
 	 */
-	bool isPrime(const unsigned n);
+	bool isPrime(const unsigned long long n);
 
 	/**
 	 * Generate a list of prime numbers up to a maximum value inclusively.
 	 * @param max The last possible number to include in the list of primes (all other returned values will be less than this).
 	 * @return A const vector containing all of the primes found while generating.
 	 */
-	const std::vector<unsigned> generatePrimes(const unsigned max);
+	const std::vector<unsigned long long> generatePrimes(const unsigned long long max);
 } // Primes
 
 /// General-purpose mathematical routines I use frequently.
@@ -45,7 +45,7 @@ namespace Math {
 	 * @return n * n-1 * n-2 * n-3 * ... * 1.
 	 * @todo This will overflow quickly! Figure out how to support big ints.
 	 */
-	unsigned factorial(const unsigned n);
+	unsigned long long factorial(const unsigned long long n);
 } // Math
 
 } // ProjectEuler
